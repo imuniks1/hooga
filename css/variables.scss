@@ -1,0 +1,27 @@
+$color-red: #E72500;
+$color-black: #000000;
+$color-gray: #999999;
+
+%absoluteCenterTop {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+%absoluteCenterLeft {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+%block {
+  display: block;
+}
+%transitionStd {
+  transition: all ease .5s;
+}
+%mb-0 {
+  margin-bottom: 0;
+}
+.hover-red {
+  color: #E72500;
+}
+.hover-btn {
+  background: #EC5133;
+}
