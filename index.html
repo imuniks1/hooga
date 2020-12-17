@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="images/png" href="images/logo.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-
 </head>
 <body>
 <div class="wrapper">
@@ -289,38 +289,67 @@
             <div class="container">
                 <div class="main-bn__description">
                     <h1> Cozy. Classic. Creative. Unique.</h1>
-                    <a href="#" class="btn-std main-bn__btn">Shop now</a>
+                    <a href="#" class="btn-std main-bn__btn" @click="showSignIn = !showSignIn">Shop now</a>
                     <a href="#" class="btn-down"></a>
                 </div>
             </div>
         </div>
-        <section  class="offers">
+        <section class="offers">
             <div class="container">
                 <h3 class="section__title">Special Offers</h3>
-                <div class="offers__content">
-                    <div class="row">
-                        <div class="column col-6 col-xs-12 col-sm-6">
-                            <div class="offers__content_left">
-                                <span class="title-block"><span class="title-block_red">10% OFF</span> Emily's newly decorated coffee table</span>
-                                <span class="offers__date">Untill 31.08.2020</span>
-                                <div class="flex-space-b">
-                                    <div class="offers-price">
-                                        <span class="offers-price_old">$165<span class="offers-price_mini">.00</span></span>
-                                        <span class="offers-price_new">$148<span class="offers-price_mini">.50</span></span>
+                <v-carousel cycle
+                            height="440"
+                            hide-delimiter-background
+                            show-arrows-on-hover>
+                    <v-carousel-item>
+                        <div class="offers__content">
+                            <div class="row">
+                                <div class="column col-6 col-xs-12 col-sm-6">
+                                    <div class="offers__content_left">
+                                        <span class="title-block"><span class="title-block_red">10% OFF</span> Emily's newly decorated coffee table</span>
+                                        <span class="offers__date">Untill 31.08.2020</span>
+                                        <div class="flex-space-b">
+                                            <div class="offers-price">
+                                                <span class="offers-price_old">$165<span class="offers-price_mini">.00</span></span>
+                                                <span class="offers-price_new">$148<span class="offers-price_mini">.50</span></span>
+                                            </div>
+                                            <div class="flex-end-y">
+                                                <a href="#" class="view-more">View Details</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="flex-end-y">
-                                        <a href="#" class="view-more">View Details</a>
-                                    </div>
+                                </div>
+                                <div class="column col-6 col-sm-6 col-xs-12 flex-end-x flex-center-y">
+                                    <img class="offers__img-slide" src="images/img-slide1.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="column col-6 col-sm-6 col-xs-12 flex-end-x flex-center-y">
-                            <img class="offers__img-slide" src="images/img-slide1.jpg" alt="">
+                    </v-carousel-item>
+                    <v-carousel-item>
+                        <div class="offers__content">
+                            <div class="row">
+                                <div class="column col-6 col-xs-12 col-sm-6">
+                                    <div class="offers__content_left">
+                                        <span class="title-block"><span class="title-block_red">10% OFF</span> Emily's newly decorated coffee table</span>
+                                        <span class="offers__date">Untill 31.08.2020</span>
+                                        <div class="flex-space-b">
+                                            <div class="offers-price">
+                                                <span class="offers-price_old">$165<span class="offers-price_mini">.00</span></span>
+                                                <span class="offers-price_new">$148<span class="offers-price_mini">.50</span></span>
+                                            </div>
+                                            <div class="flex-end-y">
+                                                <a href="#" class="view-more">View Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column col-6 col-sm-6 col-xs-12 flex-end-x flex-center-y">
+                                    <img class="offers__img-slide" src="images/img-slide1.jpg" alt="">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="arrow arrow-prev"></a>
-                    <a href="#" class="arrow arrow-next"></a>
-                </div>
+                    </v-carousel-item>
+                </v-carousel>
             </div>
         </section>
         <section class="categories">
@@ -484,42 +513,42 @@
                             <div class="row">
                                 <div class="column col-4 col-xxs-12">
                                     <div class="news__post">
-                                        <img src="images/news-1.jpg" alt="">
+                                        <img src="images/news-1.jpg" srcset="images/news-1@2x.jpg 2x, images/news-1@3x.jpg 3x">
                                         <a href="#" class="news__title">DIY: Give new life to your old wardrobe!</a>
                                         <a href="#" class="btn-more">Read More</a>
                                     </div>
                                 </div>
                                 <div class="column col-4 col-xxs-12">
                                     <div class="news__post">
-                                        <img src="images/news-2.jpg" alt="">
+                                        <img src="images/news-2.jpg" srcset="images/news-2@2x.jpg 2x, images/news-2@3x.jpg 3x">
                                         <a href="#" class="news__title">Quick lesson on how to redecorate your coffee table</a>
                                         <a href="#" class="btn-more">Read More</a>
                                     </div>
                                 </div>
                                 <div class="column col-4 col-xxs-12">
                                     <div class="news__post">
-                                        <img src="images/news-3.jpg" alt="">
+                                        <img src="images/news-3.jpg" alt="" srcset="images/news-3@2x.jpg 2x, images/news-3@3x.jpg 3x">
                                         <a href="#" class="news__title">7 Unusual ways to reuse plastic bottles</a>
                                         <a href="#" class="btn-more">Read More</a>
                                     </div>
                                 </div>
                                 <div class="column col-4 mob-none">
                                     <div class="news__post">
-                                        <img src="images/news-4.jpg" alt="">
+                                        <img src="images/news-4.jpg" srcset="images/news-4@2x.jpg 2x, images/news-4@3x.jpg 3x">
                                         <a href="#" class="news__title">A flat-picked chair made of a seat and sticks</a>
                                         <a href="#" class="btn-more">Read More</a>
                                     </div>
                                 </div>
                                 <div class="column col-4 mob-none">
                                     <div class="news__post">
-                                        <img src="images/news-5.jpg" alt="">
+                                        <img src="images/news-5.jpg" srcset="images/news-5@2x.jpg 2x, images/news-5@3x.jpg 3x">
                                         <a href="#" class="news__title">Nature-inspired outdoor seating</a>
                                         <a href="#" class="btn-more">Read More</a>
                                     </div>
                                 </div>
                                 <div class="column col-4 mob-none">
                                     <div class="news__post">
-                                        <img src="images/news-6.jpg" alt="">
+                                        <img src="images/news-6.jpg" srcset="images/news-6@2x.jpg 2x, images/news-6@3x.jpg 3x">
                                         <a href="#" class="news__title">Outdoor seating collection inspiration</a>
                                         <a href="#" class="btn-more">Read More</a>
                                     </div>
@@ -533,7 +562,7 @@
         <section class="faq">
             <div class="container">
                 <div class="box-title flex-space-b">
-                    <h3 class="section__title">Recent News</h3>
+                    <h3 class="section__title">Questions & Answers</h3>
                     <div class="flex-center-y">
                         <a href="#" class="view-more">View All</a>
                     </div>
@@ -620,117 +649,173 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 column col-xs-12">
-                        <div class="footer_left">
-                            <span class="footer__el footer__address">70 Bowman St. South Windsor,<br> CT 074, NYC</span>
-                            <div class="footer__phone">
-                                <a href="tel:+1 123 444 6666" class="footer__el">+1 <span class="text-phone">123 444 6666</span></a>
-                                <a href="tel:+1 000 111 2223">+1 <span class="text-phone">000 111 2223</span></a>
-                            </div>
-                            <a href="mailto:info@hoogahomes.com" class="footer__el footer__email">info@hoogahomes.com</a>
-                            <div class="copy">&copy; 2020 All rights reserved. <a href="#" class="footer__link">hoogahomes.com</a></div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 column col-xs-12">
+                    <div class="footer_left">
+                        <span class="footer__el footer__address">70 Bowman St. South Windsor,<br> CT 074, NYC</span>
+                        <div class="footer__phone">
+                            <a href="tel:+1 123 444 6666" class="footer__el">+1 <span class="text-phone">123 444 6666</span></a>
+                            <a href="tel:+1 000 111 2223">+1 <span class="text-phone">000 111 2223</span></a>
                         </div>
+                        <a href="mailto:info@hoogahomes.com" class="footer__el footer__email">info@hoogahomes.com</a>
+                        <div class="copy">&copy; 2020 All rights reserved. <a href="#" class="footer__link">hoogahomes.com</a></div>
                     </div>
-                    <div class="col-4 column col-xs-12">
-                        <div class="footer_center">
-                            <div class="inner-menu__footer">
-                                <ul class="inner-menu__nav flex">
-                                    <li class="inner-menu__el">
-                                        <a href="#">Shipping and delivery</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">About us</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Payment method</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Blog</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Warranties</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Donate </a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Terms and conditions</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">FAQ</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Privacy policy</a>
-                                    </li>
-                                    <li class="inner-menu__el">
-                                        <a href="#">Contact us</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-block flex">
-                                    <li class="social-block__el">
-                                        <a href="#">
-                                            <svg class="pinterest" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="25" cy="25" r="25" fill="#333333"/>
-                                                <path d="M24.9183 11C16.485 11 12 16.269 12 22.0142C12 24.6787 13.527 28.0014 15.9715 29.0552C16.3426 29.2183 16.5446 29.1489 16.6273 28.8133C16.7004 28.5583 17.0215 27.3301 17.1773 26.7507C17.2254 26.5651 17.2004 26.4038 17.0465 26.2294C16.2349 25.3144 15.5907 23.6474 15.5907 22.0836C15.5907 18.0766 18.8582 14.1858 24.4183 14.1858C29.2263 14.1858 32.59 17.2309 32.59 21.5867C32.59 26.5088 29.9187 29.914 26.4473 29.914C24.526 29.914 23.0951 28.4439 23.549 26.6251C24.0971 24.4594 25.1722 22.1305 25.1722 20.5686C25.1722 19.1679 24.3606 18.0091 22.7027 18.0091C20.7468 18.0091 19.1602 19.8973 19.1602 22.4324C19.1602 24.0431 19.7448 25.1306 19.7448 25.1306C19.7448 25.1306 17.8101 32.751 17.4504 34.1742C16.8427 36.5837 17.5331 40.4857 17.5927 40.8214C17.6293 41.007 17.8428 41.0651 17.962 40.9132C18.1524 40.6695 20.491 37.4162 21.1469 35.0648C21.3853 34.2079 22.3643 30.7334 22.3643 30.7334C23.0085 31.8678 24.8683 32.8185 26.8492 32.8185C32.742 32.8185 37 27.7689 37 21.5024C36.9788 15.4946 31.7054 11 24.9183 11Z" fill="white"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-block__el">
-                                        <a href="#">
-                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M50 25C50 11.1914 38.8086 0 25 0C11.1914 0 0 11.1914 0 25C0 38.8086 11.1914 50 25 50C25.1465 50 25.293 50 25.4395 49.9902V30.5371H20.0684V24.2773H25.4395V19.668C25.4395 14.3262 28.7012 11.416 33.4668 11.416C35.752 11.416 37.7148 11.582 38.2812 11.6602V17.2461H35C32.4121 17.2461 31.9043 18.4766 31.9043 20.2832V24.2676H38.1055L37.2949 30.5273H31.9043V49.0332C42.3535 46.0352 50 36.416 50 25Z" fill="#333333"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-block__el">
-                                        <a href="#">
-                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M29.7852 25C29.7852 27.6428 27.6428 29.7852 25 29.7852C22.3572 29.7852 20.2148 27.6428 20.2148 25C20.2148 22.3572 22.3572 20.2148 25 20.2148C27.6428 20.2148 29.7852 22.3572 29.7852 25Z" fill="#333333"/>
-                                                <path d="M36.1908 16.5336C35.9608 15.9103 35.5938 15.3461 35.117 14.883C34.6539 14.4061 34.09 14.0392 33.4663 13.8091C32.9605 13.6127 32.2006 13.3788 30.801 13.3151C29.287 13.2461 28.833 13.2312 25 13.2312C21.1666 13.2312 20.7127 13.2457 19.199 13.3147C17.7994 13.3788 17.0391 13.6127 16.5337 13.8091C15.91 14.0392 15.3458 14.4061 14.883 14.883C14.4062 15.3461 14.0392 15.9099 13.8088 16.5336C13.6124 17.0394 13.3785 17.7997 13.3148 19.1993C13.2458 20.713 13.2309 21.1669 13.2309 25.0003C13.2309 28.8333 13.2458 29.2873 13.3148 30.8013C13.3785 32.2009 13.6124 32.9608 13.8088 33.4666C14.0392 34.0903 14.4058 34.6542 14.8827 35.1173C15.3458 35.5941 15.9096 35.9611 16.5333 36.1911C17.0391 36.3879 17.7994 36.6218 19.199 36.6855C20.7127 36.7545 21.1662 36.769 24.9996 36.769C28.8334 36.769 29.2873 36.7545 30.8006 36.6855C32.2002 36.6218 32.9605 36.3879 33.4663 36.1911C34.7183 35.7082 35.7079 34.7186 36.1908 33.4666C36.3873 32.9608 36.6211 32.2009 36.6852 30.8013C36.7542 29.2873 36.7687 28.8333 36.7687 25.0003C36.7687 21.1669 36.7542 20.713 36.6852 19.1993C36.6215 17.7997 36.3876 17.0394 36.1908 16.5336ZM25 32.3714C20.9286 32.3714 17.6281 29.0714 17.6281 24.9999C17.6281 20.9285 20.9286 17.6284 25 17.6284C29.071 17.6284 32.3715 20.9285 32.3715 24.9999C32.3715 29.0714 29.071 32.3714 25 32.3714ZM32.663 19.0597C31.7116 19.0597 30.9402 18.2883 30.9402 17.337C30.9402 16.3856 31.7116 15.6142 32.663 15.6142C33.6143 15.6142 34.3857 16.3856 34.3857 17.337C34.3853 18.2883 33.6143 19.0597 32.663 19.0597Z" fill="#333333"/>
-                                                <path d="M25 0C11.195 0 0 11.195 0 25C0 38.805 11.195 50 25 50C38.805 50 50 38.805 50 25C50 11.195 38.805 0 25 0ZM39.2689 30.9185C39.1994 32.4467 38.9565 33.49 38.6017 34.4032C37.8559 36.3316 36.3316 37.8559 34.4032 38.6017C33.4904 38.9565 32.4467 39.1991 30.9189 39.2689C29.388 39.3387 28.899 39.3555 25.0004 39.3555C21.1014 39.3555 20.6127 39.3387 19.0815 39.2689C17.5537 39.1991 16.51 38.9565 15.5972 38.6017C14.6389 38.2412 13.7714 37.6762 13.0543 36.9457C12.3241 36.2289 11.7592 35.3611 11.3987 34.4032C11.0439 33.4904 10.8009 32.4467 10.7315 30.9189C10.6609 29.3877 10.6445 28.8986 10.6445 25C10.6445 21.1014 10.6609 20.6123 10.7311 19.0815C10.8006 17.5533 11.0432 16.51 11.3979 15.5968C11.7584 14.6389 12.3238 13.7711 13.0543 13.0543C13.7711 12.3238 14.6389 11.7588 15.5968 11.3983C16.51 11.0435 17.5533 10.8009 19.0815 10.7311C20.6123 10.6613 21.1014 10.6445 25 10.6445C28.8986 10.6445 29.3877 10.6613 30.9185 10.7315C32.4467 10.8009 33.49 11.0435 34.4032 11.3979C35.3611 11.7584 36.2289 12.3238 36.9461 13.0543C37.6762 13.7714 38.2416 14.6389 38.6017 15.5968C38.9568 16.51 39.1994 17.5533 39.2693 19.0815C39.3391 20.6123 39.3555 21.1014 39.3555 25C39.3555 28.8986 39.3391 29.3877 39.2689 30.9185Z" fill="#333333"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-block__el">
-                                        <a href="#">
-                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M25 0C11.195 0 0 11.195 0 25C0 38.805 11.195 50 25 50C38.805 50 50 38.805 50 25C50 11.195 38.805 0 25 0ZM36.4147 19.4923C36.4258 19.7384 36.4311 19.9856 36.4311 20.2339C36.4311 27.8164 30.6595 36.5601 20.1046 36.5604H20.105H20.1046C16.864 36.5604 13.8485 35.6106 11.3091 33.9828C11.758 34.0359 12.215 34.0622 12.6778 34.0622C15.3664 34.0622 17.8406 33.1451 19.8048 31.6059C17.2928 31.5594 15.1749 29.9004 14.444 27.6203C14.7938 27.6875 15.1535 27.7241 15.5224 27.7241C16.0461 27.7241 16.5535 27.6535 17.0357 27.5219C14.41 26.9962 12.4321 24.6758 12.4321 21.8971C12.4321 21.8712 12.4321 21.8479 12.4329 21.8239C13.2061 22.2538 14.0903 22.5124 15.0318 22.5414C13.4911 21.5134 12.4783 19.7559 12.4783 17.765C12.4783 16.7137 12.7625 15.7288 13.2553 14.8808C16.0851 18.3529 20.314 20.6364 25.0832 20.8763C24.9847 20.4559 24.934 20.018 24.934 19.5679C24.934 16.4001 27.504 13.8302 30.6728 13.8302C32.3235 13.8302 33.8142 14.5279 34.8614 15.6433C36.1687 15.3854 37.3962 14.9078 38.5052 14.2506C38.076 15.5899 37.1666 16.7137 35.9818 17.4244C37.1426 17.2855 38.2488 16.9777 39.2769 16.5207C38.509 17.6716 37.5351 18.6825 36.4147 19.4923Z" fill="#333333"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-block__el">
-                                        <a href="#">
-                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M21.8861 29.6838L30.0182 25.0001L21.8861 20.3164V29.6838Z" fill="#333333"/>
-                                                <path d="M25 0C11.195 0 0 11.195 0 25C0 38.805 11.195 50 25 50C38.805 50 50 38.805 50 25C50 11.195 38.805 0 25 0ZM40.6212 25.0256C40.6212 25.0256 40.6212 30.0957 39.978 32.5405C39.6175 33.8787 38.5624 34.9339 37.2242 35.294C34.7794 35.9375 25 35.9375 25 35.9375C25 35.9375 15.2462 35.9375 12.7758 35.2684C11.4376 34.9083 10.3825 33.8528 10.022 32.5146C9.37843 30.0957 9.37843 25 9.37843 25C9.37843 25 9.37843 19.9303 10.022 17.4854C10.3821 16.1472 11.4632 15.0661 12.7758 14.706C15.2206 14.0625 25 14.0625 25 14.0625C25 14.0625 34.7794 14.0625 37.2242 14.7316C38.5624 15.0917 39.6175 16.1472 39.978 17.4854C40.6471 19.9303 40.6212 25.0256 40.6212 25.0256Z" fill="#333333"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 column col-xs-12">
-                        <div class="subscription">
-                            <span class="subscription__title">Get 10% OFF your first purchase!</span>
-                            <span class="subscription__text">Join our mailing list and get a personal -10% coupon for your first purchase!</span>
-                            <form action="#" class="footer__form">
-                                <input type="text" class="std__input" placeholder="Your Email...">
-                                <button type="submit" class="btn-std subscription__btn">Subscribe</button>
-                            </form><x></x>
+                </div>
+                <div class="col-4 column col-xs-12">
+                    <div class="footer_center">
+                        <div class="inner-menu__footer">
+                            <ul class="inner-menu__nav flex">
+                                <li class="inner-menu__el">
+                                    <a href="#">Shipping and delivery</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">About us</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Payment method</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Warranties</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Donate </a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Terms and conditions</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li class="inner-menu__el">
+                                    <a href="#">Contact us</a>
+                                </li>
+                            </ul>
+                            <ul class="social-block flex">
+                                <li class="social-block__el">
+                                    <a href="#">
+                                        <svg class="pinterest" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="25" cy="25" r="25" fill="#333333"/>
+                                            <path d="M24.9183 11C16.485 11 12 16.269 12 22.0142C12 24.6787 13.527 28.0014 15.9715 29.0552C16.3426 29.2183 16.5446 29.1489 16.6273 28.8133C16.7004 28.5583 17.0215 27.3301 17.1773 26.7507C17.2254 26.5651 17.2004 26.4038 17.0465 26.2294C16.2349 25.3144 15.5907 23.6474 15.5907 22.0836C15.5907 18.0766 18.8582 14.1858 24.4183 14.1858C29.2263 14.1858 32.59 17.2309 32.59 21.5867C32.59 26.5088 29.9187 29.914 26.4473 29.914C24.526 29.914 23.0951 28.4439 23.549 26.6251C24.0971 24.4594 25.1722 22.1305 25.1722 20.5686C25.1722 19.1679 24.3606 18.0091 22.7027 18.0091C20.7468 18.0091 19.1602 19.8973 19.1602 22.4324C19.1602 24.0431 19.7448 25.1306 19.7448 25.1306C19.7448 25.1306 17.8101 32.751 17.4504 34.1742C16.8427 36.5837 17.5331 40.4857 17.5927 40.8214C17.6293 41.007 17.8428 41.0651 17.962 40.9132C18.1524 40.6695 20.491 37.4162 21.1469 35.0648C21.3853 34.2079 22.3643 30.7334 22.3643 30.7334C23.0085 31.8678 24.8683 32.8185 26.8492 32.8185C32.742 32.8185 37 27.7689 37 21.5024C36.9788 15.4946 31.7054 11 24.9183 11Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-block__el">
+                                    <a href="#">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 11.1914 38.8086 0 25 0C11.1914 0 0 11.1914 0 25C0 38.8086 11.1914 50 25 50C25.1465 50 25.293 50 25.4395 49.9902V30.5371H20.0684V24.2773H25.4395V19.668C25.4395 14.3262 28.7012 11.416 33.4668 11.416C35.752 11.416 37.7148 11.582 38.2812 11.6602V17.2461H35C32.4121 17.2461 31.9043 18.4766 31.9043 20.2832V24.2676H38.1055L37.2949 30.5273H31.9043V49.0332C42.3535 46.0352 50 36.416 50 25Z" fill="#333333"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-block__el">
+                                    <a href="#">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M29.7852 25C29.7852 27.6428 27.6428 29.7852 25 29.7852C22.3572 29.7852 20.2148 27.6428 20.2148 25C20.2148 22.3572 22.3572 20.2148 25 20.2148C27.6428 20.2148 29.7852 22.3572 29.7852 25Z" fill="#333333"/>
+                                            <path d="M36.1908 16.5336C35.9608 15.9103 35.5938 15.3461 35.117 14.883C34.6539 14.4061 34.09 14.0392 33.4663 13.8091C32.9605 13.6127 32.2006 13.3788 30.801 13.3151C29.287 13.2461 28.833 13.2312 25 13.2312C21.1666 13.2312 20.7127 13.2457 19.199 13.3147C17.7994 13.3788 17.0391 13.6127 16.5337 13.8091C15.91 14.0392 15.3458 14.4061 14.883 14.883C14.4062 15.3461 14.0392 15.9099 13.8088 16.5336C13.6124 17.0394 13.3785 17.7997 13.3148 19.1993C13.2458 20.713 13.2309 21.1669 13.2309 25.0003C13.2309 28.8333 13.2458 29.2873 13.3148 30.8013C13.3785 32.2009 13.6124 32.9608 13.8088 33.4666C14.0392 34.0903 14.4058 34.6542 14.8827 35.1173C15.3458 35.5941 15.9096 35.9611 16.5333 36.1911C17.0391 36.3879 17.7994 36.6218 19.199 36.6855C20.7127 36.7545 21.1662 36.769 24.9996 36.769C28.8334 36.769 29.2873 36.7545 30.8006 36.6855C32.2002 36.6218 32.9605 36.3879 33.4663 36.1911C34.7183 35.7082 35.7079 34.7186 36.1908 33.4666C36.3873 32.9608 36.6211 32.2009 36.6852 30.8013C36.7542 29.2873 36.7687 28.8333 36.7687 25.0003C36.7687 21.1669 36.7542 20.713 36.6852 19.1993C36.6215 17.7997 36.3876 17.0394 36.1908 16.5336ZM25 32.3714C20.9286 32.3714 17.6281 29.0714 17.6281 24.9999C17.6281 20.9285 20.9286 17.6284 25 17.6284C29.071 17.6284 32.3715 20.9285 32.3715 24.9999C32.3715 29.0714 29.071 32.3714 25 32.3714ZM32.663 19.0597C31.7116 19.0597 30.9402 18.2883 30.9402 17.337C30.9402 16.3856 31.7116 15.6142 32.663 15.6142C33.6143 15.6142 34.3857 16.3856 34.3857 17.337C34.3853 18.2883 33.6143 19.0597 32.663 19.0597Z" fill="#333333"/>
+                                            <path d="M25 0C11.195 0 0 11.195 0 25C0 38.805 11.195 50 25 50C38.805 50 50 38.805 50 25C50 11.195 38.805 0 25 0ZM39.2689 30.9185C39.1994 32.4467 38.9565 33.49 38.6017 34.4032C37.8559 36.3316 36.3316 37.8559 34.4032 38.6017C33.4904 38.9565 32.4467 39.1991 30.9189 39.2689C29.388 39.3387 28.899 39.3555 25.0004 39.3555C21.1014 39.3555 20.6127 39.3387 19.0815 39.2689C17.5537 39.1991 16.51 38.9565 15.5972 38.6017C14.6389 38.2412 13.7714 37.6762 13.0543 36.9457C12.3241 36.2289 11.7592 35.3611 11.3987 34.4032C11.0439 33.4904 10.8009 32.4467 10.7315 30.9189C10.6609 29.3877 10.6445 28.8986 10.6445 25C10.6445 21.1014 10.6609 20.6123 10.7311 19.0815C10.8006 17.5533 11.0432 16.51 11.3979 15.5968C11.7584 14.6389 12.3238 13.7711 13.0543 13.0543C13.7711 12.3238 14.6389 11.7588 15.5968 11.3983C16.51 11.0435 17.5533 10.8009 19.0815 10.7311C20.6123 10.6613 21.1014 10.6445 25 10.6445C28.8986 10.6445 29.3877 10.6613 30.9185 10.7315C32.4467 10.8009 33.49 11.0435 34.4032 11.3979C35.3611 11.7584 36.2289 12.3238 36.9461 13.0543C37.6762 13.7714 38.2416 14.6389 38.6017 15.5968C38.9568 16.51 39.1994 17.5533 39.2693 19.0815C39.3391 20.6123 39.3555 21.1014 39.3555 25C39.3555 28.8986 39.3391 29.3877 39.2689 30.9185Z" fill="#333333"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-block__el">
+                                    <a href="#">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M25 0C11.195 0 0 11.195 0 25C0 38.805 11.195 50 25 50C38.805 50 50 38.805 50 25C50 11.195 38.805 0 25 0ZM36.4147 19.4923C36.4258 19.7384 36.4311 19.9856 36.4311 20.2339C36.4311 27.8164 30.6595 36.5601 20.1046 36.5604H20.105H20.1046C16.864 36.5604 13.8485 35.6106 11.3091 33.9828C11.758 34.0359 12.215 34.0622 12.6778 34.0622C15.3664 34.0622 17.8406 33.1451 19.8048 31.6059C17.2928 31.5594 15.1749 29.9004 14.444 27.6203C14.7938 27.6875 15.1535 27.7241 15.5224 27.7241C16.0461 27.7241 16.5535 27.6535 17.0357 27.5219C14.41 26.9962 12.4321 24.6758 12.4321 21.8971C12.4321 21.8712 12.4321 21.8479 12.4329 21.8239C13.2061 22.2538 14.0903 22.5124 15.0318 22.5414C13.4911 21.5134 12.4783 19.7559 12.4783 17.765C12.4783 16.7137 12.7625 15.7288 13.2553 14.8808C16.0851 18.3529 20.314 20.6364 25.0832 20.8763C24.9847 20.4559 24.934 20.018 24.934 19.5679C24.934 16.4001 27.504 13.8302 30.6728 13.8302C32.3235 13.8302 33.8142 14.5279 34.8614 15.6433C36.1687 15.3854 37.3962 14.9078 38.5052 14.2506C38.076 15.5899 37.1666 16.7137 35.9818 17.4244C37.1426 17.2855 38.2488 16.9777 39.2769 16.5207C38.509 17.6716 37.5351 18.6825 36.4147 19.4923Z" fill="#333333"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-block__el">
+                                    <a href="#">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.8861 29.6838L30.0182 25.0001L21.8861 20.3164V29.6838Z" fill="#333333"/>
+                                            <path d="M25 0C11.195 0 0 11.195 0 25C0 38.805 11.195 50 25 50C38.805 50 50 38.805 50 25C50 11.195 38.805 0 25 0ZM40.6212 25.0256C40.6212 25.0256 40.6212 30.0957 39.978 32.5405C39.6175 33.8787 38.5624 34.9339 37.2242 35.294C34.7794 35.9375 25 35.9375 25 35.9375C25 35.9375 15.2462 35.9375 12.7758 35.2684C11.4376 34.9083 10.3825 33.8528 10.022 32.5146C9.37843 30.0957 9.37843 25 9.37843 25C9.37843 25 9.37843 19.9303 10.022 17.4854C10.3821 16.1472 11.4632 15.0661 12.7758 14.706C15.2206 14.0625 25 14.0625 25 14.0625C25 14.0625 34.7794 14.0625 37.2242 14.7316C38.5624 15.0917 39.6175 16.1472 39.978 17.4854C40.6471 19.9303 40.6212 25.0256 40.6212 25.0256Z" fill="#333333"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <div class="col-4 column col-xs-12">
+                    <div class="subscription">
+                        <span class="subscription__title">Get 10% OFF your first purchase!</span>
+                        <span class="subscription__text">Join our mailing list and get a personal -10% coupon for your first purchase!</span>
+                        <form action="#" class="footer__form">
+                            <input type="text" class="std__input" placeholder="Your Email...">
+                            <button type="submit" class="btn-std subscription__btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <a href="#" class="to-top flex-space-b">Scroll Up <img class="to-top__arrow" src="images/arrow-top.svg" alt=""></a>
-        </footer>
-    </div>
+        </div>
+        <a href="#" class="to-top flex-space-b">Scroll Up <img class="to-top__arrow" src="images/arrow-top.svg" alt=""></a>
+    </footer>
+    <transition name="fade">
+        <div class="modal modal-sign-in" v-if="showSignIn" :class="{active : showSignIn  = true}">
+            <div class="modal-wrapper">
+                <div class="modal-content">
+                    <span class="close" @click="showSignIn = !showSignIn"></span>
+                    <span class="section__title"> Sign In </span>
+                    <form action="#" class="form-sign-in">
+                        <input type="text" class="std__input" placeholder="Username or email *">
+                        <input type="password" class="std__input" placeholder="Password *">
+                        <button type="submit" class="btn-std subscription__btn">Log in</button>
+                    </form>
+                    <div class="modal-password flex-space-b flex-center-y">
+                        <div class="modal-password_left flex">
+                            <input type="checkbox" class="modal-password__checkbox" id="password-remember">
+                            <label  class="modal-password__label" for="password-remember"> Remember me</label>
+                        </div>
+                        <div class="modal-password_right">
+                            <a href="#" class="modal-password-lost">Lost password?</a>
+                        </div>
+                    </div>
+                    <div class="modal-sign-in__login">
+                        <span class="product-tab__content-title">Or login with</span>
+                        <a href="#" class="btn-std login-facebook flex-center-x flex-center-y">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path d="M13.3309 3.32083H15.1567V0.140833C14.8417 0.0974997 13.7584 -2.38419e-07 12.4967 -2.38419e-07C6.72005 -2.38419e-07 8.29172 6.54166 8.06172 7.5H5.15588V11.055H8.06088V20H11.6226V11.0558H14.41L14.8525 7.50083H11.6217C11.7784 5.1475 10.9875 3.32083 13.3309 3.32083Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Facebook</a>
+                        <a href="#" class="btn-std login-google flex-center-x flex-center-y">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path d="M17.3946 8.80517C17.3946 8.24196 17.3361 7.80723 17.2547 7.37364H9.13351V10.3308H14.0165C13.1585 15.7219 3.80542 15.2734 3.80542 8.60558C3.80542 3.804 9.47189 1.52479 12.5609 4.49682L14.8963 2.25547C9.59921 -2.7067 0.529419 1.01206 0.529419 8.60558C0.529419 19.7091 17.3946 20.3664 17.3946 8.80517Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="16.9412" height="18" fill="white" transform="translate(0.529419)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Google
+                        </a>
+                    </div>
+                    <a href="#" class="modal-link">No account yet?</a>
+                    <a href="#" class="modal-link modal-create-acc">Create an account</a>
+                </div>
+            </div>
+        </div>
+    </transition>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="images/png" href="images/logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 
@@ -304,8 +305,36 @@
                                     <div class="filter-holder">
                                         <div class="filter-range">
                                             <span class="filter__title">Filter by price</span>
-
-                                           
+                                            <v-app>
+                                                <v-card flat color="transparent">
+                                                    <v-card-text>
+                                                        <v-row>
+                                                            <v-col class="px-4">
+                                                                <v-range-slider
+                                                                        v-model="range"
+                                                                        :max="max"
+                                                                        :min="min"
+                                                                        hide-details
+                                                                        class="align-center"
+                                                                >
+                                                                </v-range-slider>
+                                                                <div class="flex-center-y">
+                                                                    <span class="filter-slider__title">Price:</span>
+                                                                    <div class="filter-block__val flex">
+                                                                        <div class="filter-slider__val">
+                                                                            <span>$</span><span v-text="range[0]"> </span>
+                                                                        </div>
+                                                                        <span style="display: block;margin: 0 15px;"> </span>
+                                                                        <div class="filter-slider__val">
+                                                                            <span>$</span><span v-text="range[1]"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </v-col>
+                                                        </v-row>
+                                                    </v-card-text>
+                                                </v-card>
+                                            </v-app>
                                         </div>
                                     </div>
                                     <div class="filter-holder">
@@ -583,7 +612,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img1.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/product-img3.jpg" alt="" srcset="images/product-img3@2x.jpg 2x, images/product-img3@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Nerd wooden chair</span>
                                     <span class="products-price">$129<span class="products-price_mini">.00</span></span>
@@ -651,7 +680,7 @@
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
                                 <span class="products__sticker">-20%</span>
-                                <img src="images/product-img2.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/deal-product-img19.jpg" alt="" srcset="images/deal-product-img19@2x.jpg 2x, images/deal-product-img19@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Fiber base chair </span>
                                     <span class="products-price products-price_old">$265<span class="products-price_mini">.00</span></span>
@@ -719,7 +748,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img1.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/product-img5.jpg" alt="" srcset="images/product-img5@2x.jpg 2x, images/product-img5@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Wooden naïve chair</span>
                                     <span class="products-price">$119<span class="products-price_mini">.00</span></span>
@@ -786,7 +815,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img2.jpg" alt="" srcset="images/product-img2@2x.jpg 2x, images/product-img2@3x.jpg 3x">
+                                <img src="images/product-img6.jpg" alt="" srcset="images/product-img6@2x.jpg 2x, images/product-img6@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Wooden naïve chair</span>
                                     <span class="products-price">$149<span class="products-price_mini">.00</span></span>
@@ -853,7 +882,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img1.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/product-img7.jpg" alt="" srcset="images/product-img7@2x.jpg 2x, images/product-img7@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Wooden naïve chair</span>
                                     <span class="products-price">$129<span class="products-price_mini">.00</span></span>
@@ -1058,7 +1087,7 @@
                             <div class="products__box">
                                 <img src="images/product-img2.jpg" alt="" srcset="images/product-img2@2x.jpg 2x, images/product-img2@3x.jpg 3x">
                                 <div class="products-description">
-                                    <span class="products-description__title">Wooden naïve chair</span>
+                                    <span class="products-description__title">Panton tunior chair</span>
                                     <span class="products-price">$149<span class="products-price_mini">.00</span></span>
                                 </div>
                                 <div class="products-hide">
@@ -1123,9 +1152,9 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img1.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/product-img3.jpg" alt="" srcset="images/product-img3@2x.jpg 2x, images/product-img3@3x.jpg 3x">
                                 <div class="products-description">
-                                    <span class="products-description__title">Wooden naïve chair</span>
+                                    <span class="products-description__title">Nerd wooden chair</span>
                                     <span class="products-price">$129<span class="products-price_mini">.00</span></span>
                                 </div>
                                 <div class="products-hide">
@@ -1191,9 +1220,9 @@
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
                                 <span class="products__sticker">-20%</span>
-                                <img src="images/product-img2.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/deal-product-img19.jpg" alt="" srcset="images/deal-product-img19@2x.jpg 2x, images/deal-product-img19@3x.jpg 3x">
                                 <div class="products-description">
-                                    <span class="products-description__title">Wooden naïve chair</span>
+                                    <span class="products-description__title">Fiber base chair </span>
                                     <span class="products-price products-price_old">$265<span class="products-price_mini">.00</span></span>
                                     <span class="products-price products-price_new">$212<span class="products-price_mini">.00</span></span>
                                 </div>
@@ -1259,7 +1288,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img1.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/product-img5.jpg" alt="" srcset="images/product-img5@2x.jpg 2x, images/product-img5@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Wooden naïve chair</span>
                                     <span class="products-price">$119<span class="products-price_mini">.00</span></span>
@@ -1326,7 +1355,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img2.jpg" alt="" srcset="images/product-img2@2x.jpg 2x, images/product-img2@3x.jpg 3x">
+                                <img src="images/product-img6.jpg" alt="" srcset="images/product-img6@2x.jpg 2x, images/product-img6@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Wooden naïve chair</span>
                                     <span class="products-price">$149<span class="products-price_mini">.00</span></span>
@@ -1393,7 +1422,7 @@
                         </div>
                         <div class="column col-3 col-xs-4 col-xxs-6">
                             <div class="products__box">
-                                <img src="images/product-img1.jpg" alt="" srcset="images/product-img1@2x.jpg 2x, images/product-img1@3x.jpg 3x">
+                                <img src="images/product-img7.jpg" alt="" srcset="images/product-img7@2x.jpg 2x, images/product-img7@3x.jpg 3x">
                                 <div class="products-description">
                                     <span class="products-description__title">Wooden naïve chair</span>
                                     <span class="products-price">$129<span class="products-price_mini">.00</span></span>
@@ -1915,6 +1944,7 @@
     </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
